@@ -26,6 +26,6 @@ This tool is free software; you can redistribute it and/or modify
 it under the same terms as Bash itself, either Bash version 4.2.47 or,
 at your option, any later version of Bash 4 you may have available.
 
-![alt tag](https://raw.githubusercontent.com/vroncevic/embeddedobj/master/bash_logo_255_113.png)
+![alt tag](https://raw.githubusercontent.com/vroncevic/embeddedobj/master/cc++_logo.jpg)
 ![alt tag](https://raw.githubusercontent.com/vroncevic/embeddedobj/master/linux_logo_327_215.jpg)
 
