@@ -25,7 +25,7 @@
 
 struct _object {
 	char privateChar;
-    int	privateInteger;
+	int privateInteger;
 	float privateFloat;
 	double privateDouble;
     char * privateString;

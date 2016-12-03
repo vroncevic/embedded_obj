@@ -20,17 +20,17 @@
 #include "embeddedobj.h"
 
 eobj newobj() {
-    eobj object = (eobj)malloc(sizeof(struct _object));
-    bzero(object, sizeof(struct _object));
-    return object;
+	eobj object = (eobj)malloc(sizeof(struct _object));
+	bzero(object, sizeof(struct _object));
+	return object;
 }
 
 void delobj(eobj object) {
-    free(object);
+	free(object);
 }
 
 void dumpState(eobj object) {
-    if(object == NULL) return;
+	if(object == NULL) return;
 	if(isalpha(object->privateChar)) {
 		printf("value of private string == NaA\n");
 	} else {
@@ -51,36 +51,36 @@ void dumpState(eobj object) {
 	} else {
 		printf("value of private double == %lf\n", object->privateDouble);
 	}
-    if(object->privateString == NULL) {
-        printf("value of private string == (NULL)\n");
-    } else {
+	if(object->privateString == NULL) {
+		printf("value of private string == (NULL)\n");
+	} else {
 		printf("value of private string == %s\n", object->privateString);
-    }
+	}
 }
 
 void setCharacter(eobj object, char Char) {
 	if(object == NULL) return;  
-    object->privateChar = Char;
+	object->privateChar = Char;
 }
 
 void setInteger(eobj object, int Integer) {
-    if(object == NULL) return;  
-    object->privateInteger = Integer;
+	if(object == NULL) return;  
+	object->privateInteger = Integer;
 }
 
 void setFloat(eobj object, float Float) {
-    if(object == NULL) return;  
-    object->privateFloat = Float;
+	if(object == NULL) return;  
+	object->privateFloat = Float;
 }
 
 void setDouble(eobj object, double Double) {
-    if(object == NULL) return;  
-    object->privateDouble = Double;
+	if(object == NULL) return;  
+	object->privateDouble = Double;
 }
 
 void setString(eobj object, char *String) {
-    if(object == NULL) return;
-    object->privateString = String;
+	if(object == NULL) return;
+	object->privateString = String;
 }
 
 char getCharacter(eobj object) {
