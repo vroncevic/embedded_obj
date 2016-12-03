@@ -1,0 +1,17 @@
+##
+## genclibpro ver.1.0 
+##
+prefix=@prefix@
+exec_prefix=@exec_prefix@
+libdir=@libdir@
+datarootdir=@datarootdir@
+datadir=@datadir@
+includedir=@includedir@/libembeddedobj-0.1
+
+Name: libembeddedobj
+Description: Ansi C library.
+Version: @VERSION@
+Requires: 
+Libs: -L${libdir} -lembeddedobj
+Cflags: -I${includedir}
+
