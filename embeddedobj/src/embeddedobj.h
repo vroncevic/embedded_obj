@@ -28,7 +28,7 @@ struct _object {
 	int privateInteger;
 	float privateFloat;
 	double privateDouble;
-    char * privateString;
+	char * privateString;
 };
 
 typedef struct _object * eobj;
