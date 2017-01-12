@@ -1,5 +1,7 @@
 ##
-## genclibpro ver.1.0 
+## @info   genclibpro ver.1.0
+## @author Vladimir Roncevic <elektron.ronca@gmail.com>
+## @brief  Process this file in build stage
 ##
 prefix=@prefix@
 exec_prefix=@exec_prefix@

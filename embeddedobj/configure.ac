@@ -1,7 +1,8 @@
 dnl
-dnl genclibpro ver.1.0
+dnl @info   genclibpro ver.1.0
+dnl @author Vladimir Roncevic <elektron.ronca@gmail.com>
+dnl @brief  Process this file with autoconf to produce a configure script.
 dnl
-dnl Process this file with autoconf to produce a configure script.
 AC_INIT(embeddedobj, 0.1)
 AC_CONFIG_HEADERS([config.h])
 AM_INIT_AUTOMAKE([1.11])
