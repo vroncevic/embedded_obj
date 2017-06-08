@@ -16,12 +16,14 @@
  * You should have received a copy of the GNU General Public License along
  * with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
+#ifndef __EMBEDDEDOBJ_H
+#define __EMBEDDEDOBJ_H
 
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include <math.h>
 #include <ctype.h>
+#include <math.h>
 
 struct _object {
 	char privateChar;
@@ -33,7 +35,7 @@ struct _object {
 
 typedef struct _object * eobj;
 
-eobj newobj();
+eobj newobj(void);
 void delobj(eobj);
 void dumpState(eobj);
 
@@ -48,4 +50,6 @@ int getInteger(eobj);
 float getFloat(eobj);
 double getDouble(eobj);
 char * getString(eobj);
+
+#endif
 
