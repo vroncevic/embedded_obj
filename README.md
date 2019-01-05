@@ -25,7 +25,7 @@ Standard ANSI libraries
 
 ### COPYRIGHT AND LICENCE
 
-Copyright (C) 2019 by https://vroncevic.github.io/embeddedobj
+Copyright (C) 2019 by https://vroncevic.github.io/embedded_obj
 
 This tool is free software; you can redistribute it and/or modify it.
 
