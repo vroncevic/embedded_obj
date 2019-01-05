@@ -26,30 +26,30 @@
 #include <math.h>
 
 struct _object {
-	char privateChar;
-	int privateInteger;
-	float privateFloat;
-	double privateDouble;
-	char * privateString;
+	char private_char;
+	int private_integer;
+	float private_float;
+	double private_double;
+	char * private_string;
 };
 
 typedef struct _object * eobj;
 
-eobj newobj(void);
-void delobj(eobj);
-void dumpState(eobj);
+eobj new_obj(void);
+void del_obj(eobj);
+void dump_state(eobj);
 
-void setCharacter(eobj, char);
-void setInteger(eobj, int);
-void setFloat(eobj, float);
-void setDouble(eobj, double);
-void setString(eobj, char *);
+void set_character(eobj, char);
+void set_integer(eobj, int);
+void set_float(eobj, float);
+void set_double(eobj, double);
+void set_string(eobj, char *);
 
-char getCharacter(eobj);
-int getInteger(eobj);
-float getFloat(eobj);
-double getDouble(eobj);
-char * getString(eobj);
+char get_character(eobj);
+int get_integer(eobj);
+float get_float(eobj);
+double get_double(eobj);
+char * get_string(eobj);
 
 #endif
 
