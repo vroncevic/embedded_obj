@@ -19,7 +19,7 @@
 
 #include "embeddedobj.h"
 
-eobj newobj(void) {
+eobj new_obj(void) {
 
 	eobj object = (eobj) malloc(sizeof(struct _object));
 	bzero(object, sizeof(struct _object));
@@ -28,96 +28,96 @@ eobj newobj(void) {
 
 }
 
-void delobj(eobj object) {
+void del_obj(eobj object) {
 	free(object);
 	object = NULL;
 }
 
-void dumpState(eobj object) {
+void dump_state(eobj object) {
 
 	if(object == NULL) {
 		return;
 	}
 
-	if(isalpha(object->privateChar)) {
+	if(isalpha(object->private_char)) {
 		printf("value of private string == NaA\n");
 	} else {
-		printf("value of private character == %c\n", object->privateChar);
+		printf("value of private character == %c\n", object->private_char);
 	}
-	if(isnan(object->privateInteger)) {
+	if(isnan((float) object->private_integer)) {
 		printf("value of private int == NaN\n");
 	} else {
-		printf("value of private int == %d\n", object->privateInteger);
+		printf("value of private int == %d\n", object->private_integer);
 	}
-	if(isnan(object->privateFloat)) {
+	if(isnan(object->private_float)) {
 		printf("value of private float == NaN\n");
 	} else {
-		printf("value of private float == %f\n", object->privateFloat);
+		printf("value of private float == %f\n", object->private_float);
 	}
-	if(isnan(object->privateDouble)) {
+	if(isnan(object->private_double)) {
 		printf("value of private double == NaN\n");
 	} else {
-		printf("value of private double == %lf\n", object->privateDouble);
+		printf("value of private double == %lf\n", object->private_double);
 	}
-	if(object->privateString == NULL) {
+	if(object->private_string == NULL) {
 		printf("value of private string == (NULL)\n");
 	} else {
-		printf("value of private string == %s\n", object->privateString);
+		printf("value of private string == %s\n", object->private_string);
 	}
 }
 
-void setCharacter(eobj object, char Char) {
+void set_character(eobj object, char Char) {
 	if(object == NULL) {
 		return;
 	}
-	object->privateChar = Char;
+	object->private_char = Char;
 }
 
-void setInteger(eobj object, int Integer) {
-	if(object == NULL) {
-		return;
-	} 
-	object->privateInteger = Integer;
-}
-
-void setFloat(eobj object, float Float) {
-	if(object == NULL) {
-		return;
-	} 
-	object->privateFloat = Float;
-}
-
-void setDouble(eobj object, double Double) {
-	if(object == NULL) {
-		return;
-	} 
-	object->privateDouble = Double;
-}
-
-void setString(eobj object, char *String) {
+void set_integer(eobj object, int Integer) {
 	if(object == NULL) {
 		return;
 	}
-	object->privateString = String;
+	object->private_integer = Integer;
 }
 
-char getCharacter(eobj object) {
-	return (object->privateChar);
+void set_float(eobj object, float Float) {
+	if(object == NULL) {
+		return;
+	}
+	object->private_float = Float;
 }
 
-int getInteger(eobj object) {
-	return (object->privateInteger);
+void set_double(eobj object, double Double) {
+	if(object == NULL) {
+		return;
+	}
+	object->private_double = Double;
 }
 
-float getFloat(eobj object) {
-	return (object->privateFloat);
+void set_string(eobj object, char *String) {
+	if(object == NULL) {
+		return;
+	}
+	object->private_string = String;
 }
 
-double getDouble(eobj object) {
-	return (object->privateDouble);
+char get_character(eobj object) {
+	return (object->private_char);
 }
 
-char * getString(eobj object) {
-	return (object->privateString);
+int get_integer(eobj object) {
+	return (object->private_integer);
+}
+
+float get_float(eobj object) {
+	return (object->private_float);
+}
+
+double get_double(eobj object) {
+	return (object->private_double);
+}
+
+char * get_string(eobj object) {
+	return (object->private_string);
 }
 
